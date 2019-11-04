@@ -151,9 +151,9 @@ router.route('/:id')
 router.route('/new')
 	.post(html.auth_wrapper(async (req, res, next) => {
 		if (req.params.id === 'new') {
-
-		} else {
 			
+		} else {
+
 		}
 	}))
 
