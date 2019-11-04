@@ -147,4 +147,14 @@ router.route('/:id')
 		}
 	}))
 
+/*POST new course portfolio page*/
+router.route('/new')
+	.post(html.auth_wrapper(async (req, res, next) => {
+		if (req.params.id === 'new') {
+			
+		} else {
+
+		}
+	}))
+
 module.exports = router;
