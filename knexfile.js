@@ -13,8 +13,8 @@ module.exports = {
   development: Object.assign({
     connection: {
       database: 'abet_system_dev',
-      user: 'amberlyn',
-      password: 'WECjk876g'
+      user: 'postgres',
+      password: 'password'
     },
     seeds: {
       directory: './src/dev/seeds'
@@ -23,7 +23,9 @@ module.exports = {
 
   test: Object.assign({
     connection: {
-      database: 'abet_system_test'
+      database: 'abet_system_test',
+      user: 'postgres',
+      password: 'password'
     },
     seeds: {
       directory: './src/test/seeds'
