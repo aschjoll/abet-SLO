@@ -1,5 +1,6 @@
 const Course = require('../../../main/helpers/course')
 const { expect } = require('../../chai')
+const fs = require("fs");
  
 describe('Helper - Course', () => {
  
@@ -57,6 +58,23 @@ describe('Helper - Course', () => {
       const expectedResults = [4, 1/3, 1/3]
  
             expect(score).to.deep.equal(expectedResults)
+        })
+    })
+})
+
+describe('Helper - Course', () => {
+ 
+    describe('update', () => {
+ 
+        it('write scores to file', async () => {
+      var scores = [5, 5, 4, 4, 3, 3]
+      var scores1 = [true, false, false]
+      var scores2 = [false, true, false]
+      var scores3 = [false, false, true]
+ 
+            const filepath = await Course.writeScores(scores, scores1, scores2, scores3) 
+            
+            expect(fs.existsSync(path)).to.deep.equal(true)
         })
     })
 })

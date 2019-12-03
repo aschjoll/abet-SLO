@@ -54,8 +54,22 @@ function updateAffectedScores(class_scores, artifact_scores_1, artifact_scores_2
   var results = [classScore, artifactScore, sloScore]
   return results
 }
+
+function writeScores(class_scores, artifact_scores_1, artifact_scores_2, artifact_scores_3){
+
+    let text = updateAffectedScores(class_scores, artifact_scores_1, artifact_scores_2, artifact_scores_3)
+    var filepath = __dirname+'/tmp/output.pdf'
+    fs.writeFile(filepath, text, (err) => {
+        // throws an error, you could also catch it here
+        if (err) throw err;
+
+    });
+
+    return filepath
+}
  
 module.exports.calculateClassScore=calculateClassScore;
 module.exports.calculateArtifactScore=calculateArtifactScore;
 module.exports.calculateSLOScore=calculateSLOScore;
 module.exports.updateAffectedScores=updateAffectedScores;
+module.exports.writeScores=writeScores;
