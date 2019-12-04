@@ -16,7 +16,7 @@ router.post('/', (req, res, next) => {
 	if (req.body.username === 'user' && req.body.password === 'password') {
 		res.redirect(302, '/course/')
 	} else {
-		res.redirect(302, '/login/')
+		res.redirect(302, '/error/')
 	}
 })
 
