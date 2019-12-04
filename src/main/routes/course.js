@@ -12,7 +12,7 @@ const course_manage_page = async (res, course_id) => {
 		student_learning_outcomes: [
 			{
 				index: 1,
-				description: 'n/a',
+				description: 'n/a', 
 				metrics: [
 					{
 						name: 'n/a',
