@@ -35,9 +35,8 @@ app.use('/css', sassMiddleware({
 }));
 app.use(express.static(path.join(project_root, 'public')));
 
-app.use('/', require('./routes/index'))
+app.use('/', require('./routes/index'));
 app.use('/login', require('./routes/login'));
 app.use('/course', require('./routes/course'));
-app.use('/error'), require('./routes/error'));
 
 module.exports = app;
